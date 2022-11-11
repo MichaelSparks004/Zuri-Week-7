@@ -1,0 +1,77 @@
+.carousel {
+    position: relative;
+    height: 700px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.carousel-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carousel-container {
+    background: blue;
+    /* padding: 10px; */
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.carousel-track {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    position: relative;
+    height: 100%;
+    transition: transform 250ms ease-in;
+}
+
+.carousel-slide {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border: 0;
+    cursor: pointer;
+    background: transparent;
+}
+
+.carousel-btn--backward {
+    left: -30px;
+}
+
+.carousel-btn--forward {
+    right: -30px;
+}
+
+.carousel-btn a {
+    width: 12px;
+}
+
+.carousel-nav {
+    display: flex;
+    justify-content: center;
+    padding: 12px 0;
+}
+
+.carousel-indicator {
+    border: 0;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.3);
+    width: 15px;
+    height: 15px;
+    margin: 0 8px;
+    cursor: pointer;
+}
+
+.carousel-indicator.current-slide {
+    background: rgba(0, 0, 0, 0.75);
+}
