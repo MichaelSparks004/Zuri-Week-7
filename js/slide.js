@@ -29,7 +29,7 @@ slides.forEach(setSlidePosition);
 
 const moveToSLide = (track, currentSlide, targetSlide) => {
     track.style.transform = 'translateX(-' + targetSlide.style.left + ')';
-    currentSlide.classList.remove('current-slide');
+    currentSlide.classList.remove('currentSlide-slide');
     targetSlide.classList.add('current-slide');
 }
 
