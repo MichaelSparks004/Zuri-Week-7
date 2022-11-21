@@ -1,3 +1,7 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
 .carousel {
     position: relative;
     height: 700px;
@@ -28,32 +32,40 @@
     transition: transform 250ms ease-in;
 }
 
+.carousel-container:hover ~ .carousel-btn--forward,
+.carousel-btn--forward:hover,
+.carousel-container:hover ~ .carousel-btn--backward,
+.carousel-btn--backward:hover {
+    display: block;
+}
+
 .carousel-slide {
     position: absolute;
     top: 0;
-    bottom: 0;
+    left: 0;
+    height: 100%;
     width: 100%;
 }
 
 .carousel-btn {
+    font-size: 30px;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    border: 0;
+    border: none;
+    outline: none;
+    display: none;
     cursor: pointer;
     background: transparent;
 }
 
 .carousel-btn--backward {
-    left: -30px;
+    color: brown;
 }
 
 .carousel-btn--forward {
-    right: -30px;
-}
-
-.carousel-btn a {
-    width: 12px;
+    right: 0;
+    color: brown;
 }
 
 .carousel-nav {
