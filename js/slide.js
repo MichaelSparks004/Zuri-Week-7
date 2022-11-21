@@ -29,7 +29,7 @@ slides.forEach(setSlidePosition);
 
 const moveToSLide = (track, currentSlide, targetSlide) => {
     track.style.transform = 'translateX(-' + targetSlide.style.left + ')';
-    currentSlide.classList.remove('currentSlide-slide');
+    currentSlide.classList.remove('current-slide');
     targetSlide.classList.add('current-slide');
 }
 
@@ -79,6 +79,6 @@ navDots.addEventListener('click', e => {
     const targetIndex = dots.findIndex(dot => dot === targetDot);
     const targetSlide = slides[targetIndex];
 
-    moveToSLide(track, current, targetSlide);
+    moveToSLide(track, currentSlide, targetSlide);
     updateDots(currentDot, targetDot);
 })
